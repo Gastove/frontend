@@ -1,10 +1,13 @@
+var pathPrefix = '../js/';
+
 require.config({
-    baseURL: 'js/lib',
+    deps: ['app'],
+    baseUrl: './js/',
     paths: {
-        jquery: "jquery.min.js",
-        underscore: "underscore-min.js",
-        backbone: "backbone-min.js",
-        marked: "marked/index.js",
+        jquery: "lib/jquery",
+        underscore: "lib/underscore-min",
+        backbone: "lib/backbone-min",
+        marked: "lib/marked/lib/marked",
     },
     shim: {
         'underscore': {

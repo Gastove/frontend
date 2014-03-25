@@ -1,6 +1,11 @@
-var app = app || {};
+//var app = app || {};
 
-app.Posts = Backbone.Collection.extend({
-    model: app.Post,
-    url: 'http://localhost:5000/api/home'
-});
+define(
+    ['backbone', 'models/post'],
+    function(Backbone, Post) {
+        return Backbone.Collection.extend ({
+        model: Post,
+        url: 'http://localhost:5000/api/home'
+        });
+    }
+);

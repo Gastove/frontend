@@ -1,13 +1,18 @@
-var app = app || {};
+//var app = app || {};
 
-app.Post = Backbone.Model.extend({
-    defaults: {
-        title: 'No title',
-        body: 'No text',
-        tags: 'No tags'
-    },
-    parse: function( response ) {
-        response['body'] = marked(response['body']);
-        return response;
+define(
+    ['backbone', 'marked'],
+    function(Backbone, marked) {
+        return Backbone.Model.extend ({
+            defaults: {
+                title: 'No title',
+                body: 'No text',
+                tags: 'No tags'
+            },
+            parse: function( response ) {
+                response.body = marked(response.body);
+                return response;
+            }
+        });
     }
-});
+);
