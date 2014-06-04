@@ -5,7 +5,7 @@ define(
     function(Backbone, Post) {
         return Backbone.Collection.extend ({
         model: Post,
-        url: 'http://localhost:5000/api/home'
+        url: 'http://localhost:5000/api/home/'
         });
     }
 );

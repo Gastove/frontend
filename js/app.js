@@ -1,10 +1,5 @@
 /*
-  Old
-var app = app || {};
-
-$(function() {
-    new app.PostsView();
-});
+  App entry point.
 */
 
 define(

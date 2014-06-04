@@ -5,6 +5,7 @@ define(
     function(Backbone, marked) {
         return Backbone.Model.extend ({
             defaults: {
+                id: 0,
                 title: 'No title',
                 body: 'No text',
                 tags: 'No tags'
