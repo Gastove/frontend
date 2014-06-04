@@ -1,0 +1,9 @@
+{
+  "name": "frontend",
+  "dependencies": {
+    "underscore": "^1.6.0",
+    "marked": "^0.3.2",
+    "backbone": "^1.1.2",
+    "jquery": "^2.1.1"
+  }
+}
