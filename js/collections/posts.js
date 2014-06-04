@@ -1,11 +1,7 @@
-//var app = app || {};
+var Backbone = require('backbone');
+var Post = require('../models/post');
 
-define(
-    ['backbone', 'models/post'],
-    function(Backbone, Post) {
-        return Backbone.Collection.extend ({
-        model: Post,
-        url: 'http://localhost:5000/api/home/'
-        });
-    }
-);
+var Posts = module.exports = Backbone.Collection.extend ({
+    model: Post,
+    url: 'http://localhost:5000/api/home/'
+});

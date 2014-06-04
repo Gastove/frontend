@@ -1,17 +1,10 @@
-/*
-  App entry point.
-*/
+var Backbone = require('backbone');
+var $ = require('jquery');
+var _ = require('underscore');
+var PostsView = require('./views/postsView');
 
-define(
-    [
-    'jquery',
-    'underscore',
-    'backbone',
-    'views/postsView'
-    ],
-    function($, _, Backbone, PostsView) {
-        $(function() {
-            new PostsView();
-        });
-    }
-);
+Backbone.$ = $;
+
+$(function() {
+    new PostsView();
+});
