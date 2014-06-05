@@ -8,7 +8,9 @@ gulp.task('watch', function() {
 
     function rebundle () {
         return bundler.bundle()
-            .pipe(source(bundler))
-            .pipe(gulp.dest('./build'));
+            .pipe(source('bundle.js'))
+            .pipe(gulp.dest('./build/'));
     }
+
+    return rebundle();
 });
