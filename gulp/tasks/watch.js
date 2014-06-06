@@ -8,7 +8,7 @@ gulp.task('watch', function() {
     bundler.on('update', rebundle);
 
     function rebundle () {
-        return bundler.bundle()
+        return bundler.bundle({debug: true})
             .pipe(source('bundle.js'))
             .pipe(gulp.dest('./build/'));
     }
