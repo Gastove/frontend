@@ -16,8 +16,6 @@ var PostsView = module.exports = React.createClass({
         });
         return (
                 <div className = "postsview">
-                What was that noise?
-                <h3> ...posts? NORP </h3>
                 {nodes}
                 </div>
         );
