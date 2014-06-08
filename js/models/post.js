@@ -2,12 +2,16 @@ var Backbone = require('backbone');
 var marked = require('marked');
 
 var Post = module.exports = Backbone.Model.extend ({
+    idAttribute: "name",
+
     defaults: {
         id: 0,
-        title: 'No title',
-        body: 'No text',
-        tags: 'No tags'
+        name: "No name",
+        title: "No title",
+        created_on: "0",
+        body: 'No text'
     },
+
     parse: function( response ) {
         response.body = marked(response.body);
         return response;

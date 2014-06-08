@@ -17,7 +17,8 @@ var PostView = module.exports = React.createClass({
         return (
                 <div className = "postViepw">
                 <h1>I pretty much dont even</h1>
-                <h1>{this.props.post.get("id")}</h1>
+                <h1>{this.props.post.get("title")}</h1>
+                <h2>{this.props.post.get("created_on")}</h2>
                 <span dangerouslySetInnerHTML={{__html: md}} />
                 </div>
         );
