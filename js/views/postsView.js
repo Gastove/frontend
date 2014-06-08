@@ -1,32 +1,55 @@
+/**@jsx React.DOM */
+
 var Backbone = require('backbone');
 var $ = require('jquery');
 var PostView = require('./post');
 var Posts = require('../collections/posts');
+var React = require('react');
 
 Backbone.$ = $;
 
-var PostsView = module.exports = Backbone.View.extend ({
-    el: '#posts',
-
-    initialize: function( initialPosts ) {
-        this.collection = new Posts( initialPosts );
-        this.collection.fetch( {reset: true} );
-        this.render();
-
-        this.listenTo( this.collection, 'add', this.renderPost );
-        this.listenTo( this.collection, 'reset', this.render );
-    },
+var PostsView = module.exports = React.createClass({
 
     render: function() {
-        this.collection.each( function( item )  {
-            this.renderPost( item );
-        }, this );
-    },
-
-    renderPost: function( item ) {
-        var postView = new PostView({
-            model: item
+        var nodes = this.props.posts.map(function(post) {
+            return <PostView post={post} />
         });
-        this.$el.append( postView.render().el );
-    }
+        return (
+                <div className = "postsview">
+                What was that noise?
+                <h3> ...posts? NORP </h3>
+                {nodes}
+                </div>
+        );
+    },
 });
+
+
+
+
+// var PostsView = module.exports = Backbone.View.extend ({
+//     el: '#posts',
+
+//     initialize: function( initialPosts ) {
+//         this.collection = new Posts( initialPosts );
+//         this.collection.fetch( {reset: true} );
+//         this.render();
+
+//         this.listenTo( this.collection, 'add', this.renderPost );
+//         this.listenTo( this.collection, 'reset', this.render );
+//     },
+
+//     render: function() {
+//         this.collection.each( function( item )  {
+//             this.renderPost( item );
+//         }, this );
+//     },
+
+//     renderPost: function( item ) {
+//         var postView = new PostView({
+//             model: item
+//         });
+//         //this.$el.append( postView.render().el );
+//         this.$el.append( React.renderComponent(postView));
+//     }
+// });
