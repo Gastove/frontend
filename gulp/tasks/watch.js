@@ -2,6 +2,9 @@ var gulp = require('gulp');
 var source = require('vinyl-source-stream');
 var watchify = require('watchify');
 
+gulp.task('watch', ['setWatch', 'browserify']);
+
+/* This is known to work, but we're trying something new.
 gulp.task('watch', function() {
 
     var bundler = watchify('./js/app.js');
@@ -15,3 +18,4 @@ gulp.task('watch', function() {
 
     return rebundle();
 });
+*/
