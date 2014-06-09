@@ -1,8 +1,6 @@
 /**@jsx React.DOM */
 
 var Backbone = require('backbone');
-var $ = require('jquery');
-var _ = require('underscore');
 var PostsView = require('./views/postsView');
 var Posts = require('./collections/posts');
 var React = require('react');
