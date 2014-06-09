@@ -6,8 +6,6 @@ var Posts = require('./collections/posts');
 var React = require('react');
 var BackboneMixin = require('./backbone_mixin');
 
-Backbone.$ = $;
-
 var app = React.createClass({
     mixins: [BackboneMixin],
 
