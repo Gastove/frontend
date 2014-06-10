@@ -2,7 +2,9 @@ var gulp = require('gulp');
 var source = require('vinyl-source-stream');
 var watchify = require('watchify');
 
-gulp.task('watch', ['setWatch', 'browserify']);
+gulp.task('watch', ['setWatch', 'browserify'], function() {
+    gulp.watch('js/sass/**', ['compass']);
+});
 
 /* This is known to work, but we're trying something new.
 gulp.task('watch', function() {
