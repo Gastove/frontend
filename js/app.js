@@ -28,6 +28,5 @@ var app = React.createClass({
     }
 });
 
-React.renderComponent(
-        <app posts={new Posts()} />,
-    document.getElementById('posts'));
+React.renderComponent(<app posts={new Posts()} />,
+                      document.getElementById('posts'));
