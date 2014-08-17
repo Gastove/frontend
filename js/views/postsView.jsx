@@ -18,7 +18,7 @@ var PostsView = module.exports = React.createClass({
         );
 
         return (
-            <div className = "postsview">
+            <div className = "posts-view">
               {nodes}
             </div>
         );
