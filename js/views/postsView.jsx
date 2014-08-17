@@ -11,13 +11,16 @@ Backbone.$ = $;
 var PostsView = module.exports = React.createClass({
 
     render: function() {
-        var nodes = this.props.posts.map(function(post) {
-            return <PostView key={post.id} post={post} />
-        });
+        var nodes = this.props.posts.map(
+            function(post) {
+                return <PostView key={post.id} post={post} />
+            }
+        );
+
         return (
-                <div className = "postsview">
-                {nodes}
-                </div>
+            <div className = "postsview">
+              {nodes}
+            </div>
         );
     },
 });
