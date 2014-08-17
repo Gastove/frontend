@@ -3,8 +3,61 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
+/* reminder: target / context = result */
+
+/* Assumes 100% size = 16px */
+
 @import "compass/reset";
 
-h1 {
-  font-weight: bold;  
+#web-app {
+  margin: 36px auto;
+  width: 960px;
+
+  .app {
+    margin: 0 auto 53px auto;
+    font: normal 100% Cambria, Georgia, serif;
+
+    .header {
+      font-size: 1.75em;
+      font-weight: italic;
+      float: top;
+      width: 100%;
+
+      img {
+        float: left;
+      }
+
+      .text {
+        width: 83.3%;
+        float: right;
+      }
+    }
+
+    .side-bar {
+      float: left;
+      width: 16.666666666%; /* 160px / 960px */
+      background-color: rgb(169, 166, 155);
+      margin: 0 auto;
+    }
+
+    .posts-view {
+
+      width: 83%; /* 800px / 960px */
+      float: right;
+      margin: 0 0 0 auto;
+
+      h1 {
+        font-size: 1.5em; /* 150% size*/
+        font-weight: bold;
+      }
+      h2 {
+        font-size: 1.4em;
+        font-weight: bold;
+      }
+      h3 {
+        font-size: 1.3em;
+        font-weight: bold;
+      }
+    }
+  }
 }
