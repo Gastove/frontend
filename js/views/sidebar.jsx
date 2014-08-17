@@ -10,4 +10,4 @@ var Sidebar = module.exports = React.createClass({
                 </div>
         );
     }
-})
+});
