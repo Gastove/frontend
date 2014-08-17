@@ -10,7 +10,8 @@ gulp.task('browserify', function() {
     var bundleMethod = global.isWatching ? watchify : browserify;
 
     var bundler = bundleMethod(
-        ['./js/app.js']
+        ['./js/app.js'],
+        {extensions: ['.jsx']}
     );
 
     var bundle = function() {
