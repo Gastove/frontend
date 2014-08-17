@@ -30,17 +30,3 @@ gulp.task('browserify', function() {
 
     return bundle();
 });
-
-//var reactify = require('reactify');
-
-
-
-/*
- * So this totally works:
- gulp.task('browserify', function() {
- return browserify('./js/app.js')
- .bundle()
- .pipe(source('bundle.js'))
- .pipe(gulp.dest('./build/'));
- });
-*/
