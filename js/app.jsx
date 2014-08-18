@@ -25,8 +25,8 @@ var app = React.createClass({
     render: function () {
         return (
             <div className="app">
-              <Header avatarUrl={avatarUrl} />
-              <Sidebar />
+              <Header />
+              <Sidebar avatarUrl={avatarUrl} posts={this.props.posts} />
               <PostsView posts={this.props.posts} />
             </div>
         );
