@@ -1,7 +1,11 @@
 var Backbone = require('backbone');
 var marked = require('marked');
 
-var Post = module.exports = Backbone.Model.extend ({
+var $ = require('jquery');
+
+Backbone.$ = $;
+
+var Post = module.exports = Backbone.Model.extend({
     idAttribute: "name",
 
     defaults: {
