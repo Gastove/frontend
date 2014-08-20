@@ -14,6 +14,10 @@ var avatarUrl = "http://www.gravatar.com/avatar/a942cea13e537bb0ea754b6d216c3377
 var app = React.createClass({
     mixins: [BackboneMixin],
 
+    getInitialState: function() {
+        return {show: "home"};
+    },
+
     componentDidMount: function() {
         this.props.posts.fetch();
     },
@@ -22,12 +26,18 @@ var app = React.createClass({
         return [this.props.posts];
     },
 
+    selectPost: function(post) {
+        this.setState({show: post});
+    },
+
     render: function () {
         return (
             <div className="app">
               <Header />
-              <Sidebar avatarUrl={avatarUrl} posts={this.props.posts} />
-              <PostsView posts={this.props.posts} />
+              <Sidebar avatarUrl={avatarUrl}
+                       posts={this.props.posts}
+                       selectPost={this.selectPost}/>
+              <PostsView posts={this.props.posts} show={this.state.show}/>
             </div>
         );
     }

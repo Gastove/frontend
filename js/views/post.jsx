@@ -1,23 +1,39 @@
-/**
- * @jsx React.DOM
- */
+/**@jsx React.DOM */
 
-var Backbone = require('backbone');
-var $ = require('jquery');
-var _ = require('underscore');
-var post = require('../models/post');
 var React = require('react');
 var Marked = require('marked');
 
-Backbone.$ = $;
-
 var PostView = module.exports = React.createClass({
+
+    getInitialState: function() {
+        return {display: false};
+    },
+
+    componentWillMount: function() {
+        if (this.props.key == this.props.show) {
+            this.setState({display: true});
+        }
+    },
+
+    componentWillReceiveProps: function(newProps) {
+        if (this.props.key == newProps.show) {
+            this.setState({display: true});
+        } else {
+            this.setState({display: false});
+        }
+    },
+
     render: function() {
-        var md = Marked(this.props.post.get("body"));
-        return (
-            <div>
-              <span dangerouslySetInnerHTML={{__html: md}} />
-            </div>
-        );
+
+        if (this.state.display) {
+            var md = Marked(this.props.post.get("body"));
+            return (
+                <div>
+                  <span dangerouslySetInnerHTML={{__html: md}} />
+                </div>
+            );
+        } else {
+            return null;
+        }
     }
 });
