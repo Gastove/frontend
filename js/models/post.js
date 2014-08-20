@@ -19,5 +19,6 @@ var Post = module.exports = Backbone.Model.extend({
     parse: function( response ) {
         response.body = marked(response.body);
         return response;
-    }
+    },
+
 });
