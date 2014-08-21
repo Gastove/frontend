@@ -28,7 +28,7 @@ var PostView = module.exports = React.createClass({
         if (this.state.display) {
             var md = Marked(this.props.post.get("body"));
             return (
-                <div>
+                <div className="page">
                   <span dangerouslySetInnerHTML={{__html: md}} />
                 </div>
             );
