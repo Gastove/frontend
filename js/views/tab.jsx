@@ -7,6 +7,10 @@ var Tab = module.exports = React.createClass({
         this.props.selectPost(this.props.post.get('name'));
     },
 
+    capitaliseFirstLetter: function (string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    },
+
     render: function() {
         var show = this.props.show;
         var key = this.props.key;
@@ -16,7 +20,7 @@ var Tab = module.exports = React.createClass({
               <a className={tabClass}
                  href='#'
                  onClick={this.handleClick}>
-                {this.props.post.get('title')}
+                {this.capitaliseFirstLetter(this.props.post.get('name'))}
               </a>
             </div>
         );
