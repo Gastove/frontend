@@ -13,7 +13,7 @@ var PostsView = module.exports = React.createClass({
         var show = this.props.show;
         var nodes = this.props.posts.map(
             function(post) {
-                return <PostView key={post.id} post={post} show={show}/>
+                return <PostView key={post.id} post={post} show={show}/>;
             }
         );
 
