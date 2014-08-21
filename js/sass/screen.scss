@@ -10,6 +10,7 @@
 @import "compass/reset";
 
 $site-grey: rgb(169, 166, 155);
+$site-orange: rgb(211, 177, 17);
 
 #web-app {
   margin: 36px auto;
@@ -30,11 +31,12 @@ $site-grey: rgb(169, 166, 155);
         float: right;
 
         p {
-          margin-left: 10%;
+          margin-left: 9.5%;
           margin-top: -2%;
           font: normal 100% Reenie Beanie;
           font-size: 2.5em;
         }
+
       }
     }
 
@@ -49,7 +51,6 @@ $site-grey: rgb(169, 166, 155);
         text-align: center;
 
         a.current {
-
           &:link {
             font-size: 115%;
             text-decoration: none;
@@ -60,11 +61,11 @@ $site-grey: rgb(169, 166, 155);
           &:link, &:visited {
             font-size: 95%;
             text-decoration: none;
-            color: rgb(169, 166, 155);
+            color: $site-grey;
           }
           &:hover {
             font-size: 100%;
-            color: rgb(211, 177, 17);
+            color: $site-orange;
           }
         }
 
@@ -96,7 +97,17 @@ $site-grey: rgb(169, 166, 155);
       }
 
       a {
-        color: $site-grey;
+        &:link {
+          color: rgb(96, 96, 96);
+        }
+
+        &:visited {
+          color: $site-grey;
+        }
+
+        &:hover {
+          color: $site-orange;
+        }
       }
     }
   }
