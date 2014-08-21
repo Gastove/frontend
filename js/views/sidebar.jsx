@@ -24,8 +24,12 @@ var Sidebar = module.exports = React.createClass({
               <img src={this.props.avatarUrl} href="www.gastove.com"/>
               <hr />
               <div className="icons">
-                <i className="fa fa-twitter fa-2x"/>
-                <i className="fa fa-github fa-2x"/>
+                <a href="http://www.twitter.com/Gastove">
+                  <i className="fa fa-twitter fa-2x"/>
+                </a>
+                <a href="http://www.github.com/Gastove">
+                  <i className="fa fa-github fa-2x"/>
+                </a>
               </div>
               <hr />
               {tabs}

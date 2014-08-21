@@ -47,8 +47,11 @@ $site-orange: rgb(211, 177, 17);
 
       .icons {
         text-align: center;
-        i {
-          display: inline-block;
+        a {
+          color: black;
+          i {
+            display: inline-block;
+          }
         }
       }
 
