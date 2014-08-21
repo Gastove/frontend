@@ -8,10 +8,14 @@ var Sidebar = module.exports = React.createClass({
 
     render: function() {
         var selectPost = this.props.selectPost;
+        var show = this.props.show;
 
         var tabs = this.props.posts.map(
             function(post) {
-                return <Tab key={post.id} post={post} selectPost={selectPost}/>;
+                return <Tab key={post.id}
+                            post={post}
+                            selectPost={selectPost}
+                            show={show}/>;
             }
         );
 
