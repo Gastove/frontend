@@ -36,7 +36,8 @@ var app = React.createClass({
               <Header />
               <Sidebar avatarUrl={avatarUrl}
                        posts={this.props.posts}
-                       selectPost={this.selectPost}/>
+                       selectPost={this.selectPost}
+                       show={this.state.show}/>
               <PostsView posts={this.props.posts} show={this.state.show}/>
             </div>
         );
