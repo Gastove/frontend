@@ -45,6 +45,20 @@ $site-orange: rgb(211, 177, 17);
       width: 16.666666666%; /* 160px / 960px */
       margin: 0 auto;
 
+      .icons {
+        text-align: center;
+        i {
+          display: inline-block;
+        }
+      }
+
+      hr {
+        height: 1px;
+        width: 90%;
+        border: 0;
+        background: black;
+      }
+
       .post-tab {
         font-size: 1.5em;
         height: 1.75em;
@@ -78,35 +92,41 @@ $site-orange: rgb(211, 177, 17);
       float: right;
       margin: 0 0 0 auto;
 
-      h1 {
-        font-size: 1.5em; /* 150% size*/
-        font-weight: bold;
-      }
-      h2 {
-        font-size: 1.4em;
-        font-weight: bold;
-      }
-      h3 {
-        font-size: 1.3em;
-        font-weight: bold;
-      }
+      .page {
 
-      p {
-        margin-top: 1em;
-        margin-bottom: 1em;
-      }
+        width: 98%;
+        margin: 0 0 0 auto;
 
-      a {
-        &:link {
-          color: rgb(96, 96, 96);
+        h1 {
+          font-size: 1.5em; /* 150% size*/
+          font-weight: bold;
+        }
+        h2 {
+          font-size: 1.4em;
+          font-weight: bold;
+        }
+        h3 {
+          font-size: 1.3em;
+          font-weight: bold;
         }
 
-        &:visited {
-          color: $site-grey;
+        p {
+          margin-top: 1em;
+          margin-bottom: 1em;
         }
 
-        &:hover {
-          color: $site-orange;
+        a {
+          &:link {
+            color: rgb(96, 96, 96);
+          }
+
+          &:visited {
+            color: $site-grey;
+          }
+
+          &:hover {
+            color: $site-orange;
+          }
         }
       }
     }
