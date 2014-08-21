@@ -25,26 +25,49 @@ $site-grey: rgb(169, 166, 155);
       float: top;
       width: 100%;
 
-      img {
-        float: left;
-      }
-
       .text {
         width: 83.333333333333%;
         float: right;
+
+        p {
+          margin-left: 10%;
+          margin-top: -2%;
+          font: normal 100% Reenie Beanie;
+          font-size: 2.5em;
+        }
       }
     }
 
     .side-bar {
       float: left;
       width: 16.666666666%; /* 160px / 960px */
-      background-color: rgb(169, 166, 155);
       margin: 0 auto;
 
       .post-tab {
         font-size: 1.5em;
         height: 1.75em;
         text-align: center;
+
+        a.current {
+
+          &:link {
+            font-size: 115%;
+            text-decoration: none;
+            color: black;
+          }
+        }
+        a.waiting {
+          &:link, &:visited {
+            font-size: 95%;
+            text-decoration: none;
+            color: rgb(169, 166, 155);
+          }
+          &:hover {
+            font-size: 100%;
+            color: rgb(211, 177, 17);
+          }
+        }
+
       }
     }
 
