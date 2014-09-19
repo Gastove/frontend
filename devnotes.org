@@ -1,0 +1,25 @@
+* Getting this bid'ness launched.
+
++ Well this is hilarious. [0/3]
+  + [ ] Implement express.
+    This will probably be a pain in the butt?
+  + [ ] Figure out how the ass to deploy
+    This one is much trickier.
+  + [ ] Manage git via javascript?
+    Looks like ~gulp-git~. Neat?
+
+* The Deploy
+K, how'm I thinking I'ma do this one?
+
+1. Do the build.
+   Does this happen on Master or no? Probably yes -- all the build crap can be dev dependencies, which will be present locally (regardless of Heroku) Then, Heroku does no build.
+   - Switch to master
+   - build into some deploy dir
+   - git add
+   - git commit
+   - git push origin master
+   - git push heroku master
+   - Switch back to dev/staging
+2. Commit the build to master
+3. Deploy master to Heroku
+4. It is awesome.
