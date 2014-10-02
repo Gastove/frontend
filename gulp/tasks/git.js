@@ -6,9 +6,16 @@ var add = function(toAdd){
         .pipe(git.add());
 };
 
-var commit = function(msg){
-    return gulp.src('buildDir/*')
-        .pipe(git.commit(msg));
+var commit = function(msg, args){
+    return gulp.src('./*')
+        .pipe(git.commit(msg, args));
+};
+
+var commitEmpty = function(){
+    var msg  = 'Empty commit, probably for testing.',
+        args = '--allow-empty';
+
+    return commit(msg, args);
 };
 
 var push = function(dest) {
