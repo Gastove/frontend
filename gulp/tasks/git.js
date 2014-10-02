@@ -24,7 +24,11 @@ var push = function(dest) {
     });
 };
 
-var changeBranch = function(dest) {};
+var changeBranch = function(dest) {
+    git.checkout(dest, function(err) {
+        if (err) throw err;
+    });
+};
 
 gulp.task('commit-build', function() {
     return gulp.src(ADDS)
