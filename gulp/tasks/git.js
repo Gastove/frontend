@@ -18,6 +18,12 @@ var commitEmpty = function(){
     return commit(msg, args);
 };
 
+var merge = function(target){
+    git.merge(target, function(err){
+        if (err) throw err;
+    });
+};
+
 var push = function(dest) {
     git.push(dest, 'master', function(err) {
         if (err) throw err;
@@ -39,7 +45,8 @@ gulp.task('commit-build', function() {
 
 gulp.task('git-test', function() {
     changeBranch('git-test');
-    commitEmpty();
+    merge('master');
+    commit('Merging origin/master for testing');
     changeBranch('master');
 });
 
