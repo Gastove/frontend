@@ -12,8 +12,8 @@ var commit = function(msg, args){
 };
 
 var commitEmpty = function(){
-    var msg  = 'Empty commit, probably for testing.',
-        args = '--allow-empty';
+    var msg  = 'Empty commit, probably for testing.';
+    var args = {args: '--allow-empty'};
 
     return commit(msg, args);
 };
@@ -40,6 +40,7 @@ gulp.task('commit-build', function() {
 gulp.task('git-test', function() {
     changeBranch('git-test');
     commitEmpty();
+    changeBranch('master');
 });
 
 gulp.task('push-to-origin', function(){
