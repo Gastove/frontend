@@ -37,6 +37,11 @@ gulp.task('commit-build', function() {
         .pipe(commit("Committing build"));
 });
 
+gulp.task('git-test', function() {
+    changeBranch('git-test');
+    commitEmpty();
+});
+
 gulp.task('push-to-origin', function(){
     return push('origin');
 });
