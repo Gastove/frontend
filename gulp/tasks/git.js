@@ -7,6 +7,8 @@ var add = function(toAdd){
 };
 
 var commit = function(msg, args){
+    var args = args || {};
+
     return gulp.src('./*')
         .pipe(git.commit(msg, args));
 };
