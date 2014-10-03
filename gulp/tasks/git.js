@@ -1,6 +1,21 @@
 var gulp = require('gulp');
 var git = require('gulp-git');
 
+var DEPLOY = 'git-test2';
+var DEV = 'git-test';
+
+/*
+ * Switch to deploy branch.      1
+ * Merge in development branch.  1
+ * Run the build.                d
+ * Add the build outputs         2
+ * Commit build outputs          2
+ * Push to master                2
+ * Push to heroku                2
+ * Change back to development branch
+ *
+ */
+
 var add = function(toAdd){
     return gulp.src(toAdd)
         .pipe(git.add());
@@ -38,7 +53,7 @@ var changeBranch = function(dest) {
     });
 };
 
-gulp.task('commit-build', function() {
+gulp.task('commitBuildOutputs', function() {
     return gulp.src(ADDS)
         .pipe(add(ADDS))
     // TODO: Need a timestamp and a better message.
@@ -52,10 +67,31 @@ gulp.task('git-test', function() {
     changeBranch('git-test');
 });
 
-gulp.task('push-to-origin', function(){
+gulp.task('mergeDevelopmentBranch', function() {
+    merge(DEV);
+});
+
+gulp.task('checkoutDeployBranch', function() {
+    changeBranch(DEPLOY);
+});
+
+gulp.task('checkoutDevelopmentBranch', function() {
+    changeBranch(DEV);
+});
+
+gulp.task('addBuildOutputs', function() {
+    add('./build/*');
+});
+
+gulp.task('commitBuildOutputs', function() {
+    val msg = 'Committing build outputs';
+    commit(msg);
+});
+
+gulp.task('pushToOrigin', function(){
     return push('origin');
 });
 
-gulp.task('push-to-heroku', function(){
+gulp.task('pushToHeroku', function(){
     return push('herokue');
 });
