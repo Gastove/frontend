@@ -6,24 +6,9 @@ var add = function(toAdd){
         .pipe(git.add());
 };
 
-var commit = function(msg, args){
-    var args = args || {};
-
-    return gulp.src('')
-        .pipe(git.commit(msg, args));
-};
-
-var commitEmpty = function(){
-    var msg  = 'Empty commit, probably for testing.';
-    var args = {args: '--allow-empty'};
-
-    return commit(msg, args);
-};
-
-var merge = function(target){
-    git.merge(target, function(err){
-        if (err) throw err;
-    });
+var commit = function(msg){
+    return gulp.src('buildDir/*')
+        .pipe(git.commit(msg));
 };
 
 var push = function(dest) {
@@ -32,24 +17,13 @@ var push = function(dest) {
     });
 };
 
-var changeBranch = function(dest) {
-    git.checkout(dest, function(err) {
-        if (err) throw err;
-    });
-};
+var changeBranch = function(dest) {};
 
 gulp.task('commit-build', function() {
     return gulp.src(ADDS)
         .pipe(add(ADDS))
     // TODO: Need a timestamp and a better message.
         .pipe(commit("Committing build"));
-});
-
-gulp.task('git-test', function() {
-    changeBranch('git-test');
-    merge('master');
-    commit('Merging origin/master for testing');
-    changeBranch('master');
 });
 
 gulp.task('push-to-origin', function(){
