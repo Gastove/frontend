@@ -49,7 +49,6 @@ gulp.task('git-test', function() {
     commitEmpty();
     changeBranch('git-test2');
     merge('git-test');
-    commit('Merging origin/master for testing');
     changeBranch('git-test');
 });
 
@@ -60,28 +59,3 @@ gulp.task('push-to-origin', function(){
 gulp.task('push-to-heroku', function(){
     return push('herokue');
 });
-
-// gulp.task('add', function(){
-//     return gulp.src('buildDir')
-//     .pipe(git.add());
-// });
-
-// gulp.task('commit', function(){
-//     var msg = 'WRITE ME';
-
-//     return gulp.src('buildDir/*')
-//     .pipe(git.commit(msg));
-
-// });
-
-// gulp.task('push-origin-master', function() {
-//     git.push('origin', 'master', function(err) {
-//         if (err) throw err;
-//     });
-// });
-
-// gulp.task('push-heroku-master', function() {
-//     git.push('origin', 'heroku', function(err) {
-//         if (err) throw err;
-//     });
-// });
