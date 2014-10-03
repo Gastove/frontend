@@ -46,10 +46,11 @@ gulp.task('commit-build', function() {
 });
 
 gulp.task('git-test', function() {
-    changeBranch('git-test');
-    merge('master');
+    commitEmpty();
+    changeBranch('git-test2');
+    merge('git-test');
     commit('Merging origin/master for testing');
-    changeBranch('master');
+    changeBranch('git-test');
 });
 
 gulp.task('push-to-origin', function(){
