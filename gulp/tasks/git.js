@@ -24,7 +24,7 @@ var add = function(toAdd){
 var commit = function(msg, args){
     var args = args || {};
 
-    return gulp.src('')
+    return gulp.src('./build/*')
         .pipe(git.commit(msg, args));
 };
 
@@ -52,13 +52,6 @@ var changeBranch = function(dest) {
         if (err) throw err;
     });
 };
-
-gulp.task('commitBuildOutputs', function() {
-    return gulp.src(ADDS)
-        .pipe(add(ADDS))
-    // TODO: Need a timestamp and a better message.
-        .pipe(commit("Committing build"));
-});
 
 gulp.task('git-test', function() {
     commitEmpty();
