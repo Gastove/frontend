@@ -4,3 +4,8 @@
 js/bundle.js
 node_modules/
 build/
+
+# Derploy
+compass.rb
+Gemfile*
+
