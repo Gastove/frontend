@@ -3,6 +3,7 @@ var git = require('gulp-git');
 
 var DEPLOY = 'git-test2';
 var DEV = 'git-test';
+var BUILD_DIR = './build/*';
 
 /*
  * Switch to deploy branch.      1
@@ -24,7 +25,7 @@ var add = function(toAdd){
 var commit = function(msg, args){
     var args = args || {};
 
-    return gulp.src('./build/*')
+    return gulp.src(BUILD_DIR)
         .pipe(git.commit(msg, args));
 };
 
