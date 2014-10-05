@@ -78,7 +78,7 @@ gulp.task('addBuildOutputs', function() {
 });
 
 gulp.task('commitBuildOutputs', function() {
-    val msg = 'Committing build outputs';
+    var msg = 'Committing build outputs';
     commit(msg);
 });
 
