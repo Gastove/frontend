@@ -8,7 +8,6 @@ var bundleLogger = require('../util/bundleLogger');
 gulp.task('browserify', function() {
 
     var bundleMethod = global.isWatching ? watchify : browserify;
-    var outputDir = global.deploy ? './' : './build/';
 
     var bundler = bundleMethod(
         ['./js/app.jsx'],
@@ -22,7 +21,7 @@ gulp.task('browserify', function() {
             .bundle({debug: true})
             .on('error', handleErrors)
             .pipe(source('bundle.js'))
-            .pipe(gulp.dest(outputDir))
+            .pipe(gulp.dest('./public/js/'))
             .on('end', bundleLogger.end);
     };
 
