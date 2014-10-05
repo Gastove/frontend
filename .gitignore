@@ -4,3 +4,5 @@
 js/bundle.js
 node_modules/
 build/
+/public/js/
+/public/stylesheets/
