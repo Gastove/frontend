@@ -4,9 +4,11 @@
 js/bundle.js
 node_modules/
 
-## Build output gets ignored on this branch
+## Only ignore the deprecated build dir
 build/
-public/js/*
-public/stylesheets/*
+
+## Ignore Ruby stuff
+Gemfile*
+compass.rb
 
 
