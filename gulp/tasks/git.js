@@ -84,9 +84,9 @@ gulp.task('commitBuildOutputs', ['addBuildOutputs'], function() {
 });
 
 gulp.task('pushToOrigin', ['commitBuildOutputs'], function(){
-    return push('origin');
+    push('origin');
 });
 
 gulp.task('pushToHeroku', ['pushToOrigin'], function(){
-    return push('heroku');
+     push('heroku');
 });
