@@ -1,8 +1,8 @@
 var gulp = require('gulp');
 var git = require('gulp-git');
 
-var DEPLOY = 'git-test2';
-var DEV = 'git-test';
+var DEPLOY = 'master';
+var DEV = 'staging';
 var BUILD_DIR = './public/*';
 
 /*
