@@ -3,7 +3,7 @@ var git = require('gulp-git');
 
 var DEPLOY = 'git-test2';
 var DEV = 'git-test';
-var BUILD_DIR = './build/*';
+var BUILD_DIR = './public/*';
 
 /*
  * Switch to deploy branch.      1
@@ -24,9 +24,9 @@ var add = function(toAdd){
 
 var commit = function(msg, args){
     var args = args || {};
-
-    return gulp.src(BUILD_DIR)
-        .pipe(git.commit(msg, args));
+    return git.commit(msg, args);
+    // return gulp.src(target)
+    //     .pipe(git.commit(msg, args));
 };
 
 var commitEmpty = function(){
@@ -73,19 +73,20 @@ gulp.task('checkoutDevelopmentBranch', function() {
     changeBranch(DEV);
 });
 
-gulp.task('addBuildOutputs', function() {
-    add('./build/*');
+gulp.task('addBuildOutputs', ['browserify'], function() {
+    add('./public/js/*');
+    add('./public/stylesheets/*');
 });
 
-gulp.task('commitBuildOutputs', function() {
+gulp.task('commitBuildOutputs', ['addBuildOutputs'], function() {
     var msg = 'Committing build outputs';
     commit(msg);
 });
 
-gulp.task('pushToOrigin', function(){
+gulp.task('pushToOrigin', ['commitBuildOutputs'], function(){
     return push('origin');
 });
 
-gulp.task('pushToHeroku', function(){
+gulp.task('pushToHeroku', ['commitBuildOutputs'], function(){
     return push('herokue');
 });
