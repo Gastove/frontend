@@ -61,7 +61,7 @@ gulp.task('git-test', function() {
     changeBranch('git-test');
 });
 
-gulp.task('mergeDevelopmentBranch', function() {
+gulp.task('mergeDevelopmentBranch', ['checkoutDeployBranch'], function() {
     merge(DEV);
 });
 
@@ -69,7 +69,7 @@ gulp.task('checkoutDeployBranch', function() {
     changeBranch(DEPLOY);
 });
 
-gulp.task('checkoutDevelopmentBranch', function() {
+gulp.task('checkoutDevelopmentBranch', ['pushToHeroku'], function() {
     changeBranch(DEV);
 });
 
