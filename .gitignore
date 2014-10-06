@@ -3,9 +3,10 @@
 *.org
 js/bundle.js
 node_modules/
-build/
 
-# Derploy
-compass.rb
-Gemfile*        
+## Build output gets ignored on this branch
+build/
+public/js/*
+public/stylesheets/*
+
 
