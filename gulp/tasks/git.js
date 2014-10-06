@@ -80,7 +80,7 @@ gulp.task('addBuildOutputs', ['browserify'], function() {
 
 gulp.task('commitBuildOutputs', ['addBuildOutputs'], function() {
     var msg = 'Committing build outputs';
-    commit(msg);
+    commit(msg, {args: '-a'});
 });
 
 gulp.task('pushToOrigin', ['commitBuildOutputs'], function(){
