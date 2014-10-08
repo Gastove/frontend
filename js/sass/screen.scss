@@ -7,6 +7,19 @@
 $site-grey: rgb(169, 166, 155);
 $site-orange: rgb(211, 177, 17);
 
+$small-screen-breakpoint: 360px;
+$large-screen-breakpoint: 960px;
+
+@mixin if-media-is($media) {
+  @if $media == phone {
+    @meida only screen and (max-width: $small-screen-breakpoint) { @content; }
+  } @else if $media == tablet {
+    @media only screen and (min-width: $small-scren-breakpoint + 1) and (max-width: $large-screen-breakpoint - 1) { @content; }
+  } @else if $media == computer {
+    @media only screen and (min-width: $large-screen-breakpoint) { @content; }
+  }
+}
+
 #web-app {
   margin: 36px auto;
   width: 960px;
