@@ -20,9 +20,12 @@ $large-screen-breakpoint: 960px;
   }
 }
 
+
 #web-app {
   margin: 36px auto;
-  width: 960px;
+  width: 95%;
+
+  @include if-media-is(computer) { width: 960px; }
 
   .app {
     margin: 0 auto 53px auto;
