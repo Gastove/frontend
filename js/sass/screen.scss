@@ -50,9 +50,11 @@ $large-screen-breakpoint: 960px;
     }
 
     .side-bar {
-      float: left;
       width: 16.666666666%; /* 160px / 960px */
       margin: 0 auto;
+
+      @include if-media-is(tablet) { float: left; }
+      @include if-media-is(computer) { float: left; }
 
       .icons {
         text-align: center;
