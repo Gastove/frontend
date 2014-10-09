@@ -106,6 +106,12 @@ $large-screen-breakpoint: 960px;
       float: right;
       margin: 0 0 0 auto;
 
+      @include if-media-is(phone) {
+        position: relative;
+        margin: 20px;
+        width: auto;
+      }
+
       .page {
 
         width: 98%;
