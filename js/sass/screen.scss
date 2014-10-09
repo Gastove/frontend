@@ -14,7 +14,7 @@ $large-screen-breakpoint: 960px;
   @if $media == phone {
     @meida only screen and (max-width: $small-screen-breakpoint) { @content; }
   } @else if $media == tablet {
-    @media only screen and (min-width: $small-scren-breakpoint + 1) and (max-width: $large-screen-breakpoint - 1) { @content; }
+    @media only screen and (min-width: $small-screen-breakpoint + 1) and (max-width: $large-screen-breakpoint - 1) { @content; }
   } @else if $media == computer {
     @media only screen and (min-width: $large-screen-breakpoint) { @content; }
   }
