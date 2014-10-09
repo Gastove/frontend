@@ -7,7 +7,7 @@
 $site-grey: rgb(169, 166, 155);
 $site-orange: rgb(211, 177, 17);
 
-$small-screen-breakpoint: 360px;
+$small-screen-breakpoint: 420px;
 $large-screen-breakpoint: 960px;
 
 @mixin if-media-is($media) {
