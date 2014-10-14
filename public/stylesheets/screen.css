@@ -65,28 +65,27 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 24, ../../js/sass/screen.scss */
+/* line 25, ../../js/sass/screen.scss */
 #web-app {
   margin: 36px auto;
   width: 95%;
 }
 @media only screen and (min-width: 960px) {
-  /* line 24, ../../js/sass/screen.scss */
+  /* line 25, ../../js/sass/screen.scss */
   #web-app {
     width: 960px;
   }
 }
-/* line 30, ../../js/sass/screen.scss */
+/* line 31, ../../js/sass/screen.scss */
 #web-app .app {
   margin: 0 auto 53px auto;
   font: normal 100% Cambria, Georgia, serif;
 }
-/* line 34, ../../js/sass/screen.scss */
+/* line 35, ../../js/sass/screen.scss */
 #web-app .app .header {
-  font-size: 1.75em;
-  font-weight: italic;
-  float: top;
-  width: 100%;
+  font-size: 1.5em;
+  width: 83.33333333%;
+  margin-left: 5%;
 }
 /* line 40, ../../js/sass/screen.scss */
 #web-app .app .header .text {
@@ -98,103 +97,153 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   margin-left: 9.5%;
   margin-top: -2%;
   font: normal 100% Reenie Beanie;
-  font-size: 2.5em;
 }
-/* line 54, ../../js/sass/screen.scss */
+@media only screen and (max-width: 320px) {
+  /* line 44, ../../js/sass/screen.scss */
+  #web-app .app .header .text p {
+    font-size: 1.75em;
+    text-indent: -50px;
+    margin-left: 1em;
+    -moz-transform: rotate(-15deg);
+    -ms-transform: rotate(-15deg);
+    -webkit-transform: rotate(-15deg);
+    transform: rotate(-15deg);
+  }
+}
+@media only screen and (min-width: 321px) and (max-width: 959px) {
+  /* line 44, ../../js/sass/screen.scss */
+  #web-app .app .header .text p {
+    font-size: 2em;
+  }
+}
+@media only screen and (min-width: 960px) {
+  /* line 44, ../../js/sass/screen.scss */
+  #web-app .app .header .text p {
+    font-size: 2.5em;
+  }
+}
+/* line 64, ../../js/sass/screen.scss */
 #web-app .app .side-bar {
-  float: left;
-  width: 16.666666666%;
-  /* 160px / 960px */
+  /* width: 16.666666666%; /\* 160px / 960px *\/ */
+  width: 160px;
   margin: 0 auto;
 }
-/* line 59, ../../js/sass/screen.scss */
+@media only screen and (min-width: 321px) and (max-width: 959px) {
+  /* line 64, ../../js/sass/screen.scss */
+  #web-app .app .side-bar {
+    float: left;
+  }
+}
+@media only screen and (min-width: 960px) {
+  /* line 64, ../../js/sass/screen.scss */
+  #web-app .app .side-bar {
+    float: left;
+  }
+}
+/* line 72, ../../js/sass/screen.scss */
 #web-app .app .side-bar .icons {
   text-align: center;
 }
-/* line 61, ../../js/sass/screen.scss */
+/* line 74, ../../js/sass/screen.scss */
 #web-app .app .side-bar .icons a {
   color: black;
 }
-/* line 63, ../../js/sass/screen.scss */
+/* line 76, ../../js/sass/screen.scss */
 #web-app .app .side-bar .icons a i {
   display: inline-block;
 }
-/* line 69, ../../js/sass/screen.scss */
+/* line 82, ../../js/sass/screen.scss */
 #web-app .app .side-bar hr {
   height: 1px;
   width: 90%;
   border: 0;
   background: black;
 }
-/* line 76, ../../js/sass/screen.scss */
+/* line 89, ../../js/sass/screen.scss */
 #web-app .app .side-bar .post-tab {
   font-size: 1.5em;
   height: 1.75em;
   text-align: center;
 }
-/* line 82, ../../js/sass/screen.scss */
+/* line 95, ../../js/sass/screen.scss */
 #web-app .app .side-bar .post-tab a.current:link {
   font-size: 115%;
   text-decoration: none;
   color: black;
 }
-/* line 89, ../../js/sass/screen.scss */
+/* line 102, ../../js/sass/screen.scss */
 #web-app .app .side-bar .post-tab a.waiting:link, #web-app .app .side-bar .post-tab a.waiting:visited {
   font-size: 95%;
   text-decoration: none;
   color: #a9a69b;
 }
-/* line 94, ../../js/sass/screen.scss */
+/* line 107, ../../js/sass/screen.scss */
 #web-app .app .side-bar .post-tab a.waiting:hover {
   font-size: 100%;
   color: #d3b111;
 }
-/* line 103, ../../js/sass/screen.scss */
+/* line 116, ../../js/sass/screen.scss */
 #web-app .app .posts-view {
-  width: 83%;
-  /* 800px / 960px */
-  float: right;
-  margin: 0 0 0 auto;
+  position: relative;
+  margin: 20px;
+  float: none;
+  width: auto;
 }
-/* line 109, ../../js/sass/screen.scss */
+@media screen and (min-width: 401px) {
+  /* line 116, ../../js/sass/screen.scss */
+  #web-app .app .posts-view {
+    width: 83%;
+    /* 800px / 960px */
+    float: left;
+    margin: 0 0 0 auto;
+  }
+}
+@media only screen and (min-width: 401px) and (min-width: 321px) and (max-width: 959px) {
+  /* line 116, ../../js/sass/screen.scss */
+  #web-app .app .posts-view {
+    max-width: 60%;
+  }
+}
+
+/* line 131, ../../js/sass/screen.scss */
 #web-app .app .posts-view .page {
   width: 98%;
   margin: 0 0 0 auto;
 }
-/* line 114, ../../js/sass/screen.scss */
+/* line 136, ../../js/sass/screen.scss */
 #web-app .app .posts-view .page h1 {
   font-size: 1.5em;
   /* 150% size*/
   font-weight: bold;
 }
-/* line 118, ../../js/sass/screen.scss */
+/* line 140, ../../js/sass/screen.scss */
 #web-app .app .posts-view .page h2 {
   font-size: 1.4em;
   font-weight: bold;
 }
-/* line 122, ../../js/sass/screen.scss */
+/* line 144, ../../js/sass/screen.scss */
 #web-app .app .posts-view .page h3 {
   font-size: 1.3em;
   font-weight: bold;
 }
-/* line 127, ../../js/sass/screen.scss */
+/* line 149, ../../js/sass/screen.scss */
 #web-app .app .posts-view .page p {
   margin-top: 1em;
   margin-bottom: 1em;
 }
-/* line 133, ../../js/sass/screen.scss */
+/* line 155, ../../js/sass/screen.scss */
 #web-app .app .posts-view .page a:link {
   color: #606060;
 }
-/* line 137, ../../js/sass/screen.scss */
+/* line 159, ../../js/sass/screen.scss */
 #web-app .app .posts-view .page a:visited {
   color: #a9a69b;
 }
-/* line 141, ../../js/sass/screen.scss */
+/* line 163, ../../js/sass/screen.scss */
 #web-app .app .posts-view .page a:hover {
   color: #d3b111;
 }
-/* line 146, ../../js/sass/screen.scss */
+/* line 168, ../../js/sass/screen.scss */
 #web-app .app .posts-view .page blockquote {
   margin: 1.5em 10px;
   border-left: 2px solid #a9a69b;
