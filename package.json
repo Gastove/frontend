@@ -1,35 +1,36 @@
 {
-  "name": "frontend",
-  "description": "THIS IS MAH APP",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/gastove/frontend.git"
-  },
-  "browserify": {
-    "transform": [
-      "reactify"
-    ]
-  },
-  "dependencies": {
-    "backbone": "^1.1.2",
-    "envify": "^1.2.1",
-    "express": "^4.9.5",
-    "jquery": "^2.1.1",
-    "marked": "^0.3.2",
-    "react": "^0.11.0",
-    "underscore": "^1.6.0"
-  },
-  "devDependencies": {
-    "browserify": "^4.1.8",
-    "gulp": "^3.7.0",
-    "gulp-compass": "^1.1.9",
-    "gulp-git": "^0.5.1",
-    "gulp-notify": "^1.3.1",
-    "gulp-util": "^2.2.16",
-    "pretty-hrtime": "^0.2.1",
-    "reactify": "^0.13.1",
-    "uglifyify": "^2.5.0",
-    "vinyl-source-stream": "^0.1.1",
-    "watchify": "^0.10.2"
-  }
+    "name": "frontend",
+    "description": "THIS IS MAH APP",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/gastove/frontend.git"
+    },
+    "browserify": {
+        "transform": [
+            "reactify",
+            "uglifyify"
+        ]
+    },
+    "dependencies": {
+        "backbone": "^1.1.2",
+        "envify": "^1.2.1",
+        "express": "^4.9.5",
+        "jquery": "^2.1.1",
+        "marked": "^0.3.2",
+        "react": "^0.11.0",
+        "underscore": "^1.6.0"
+    },
+    "devDependencies": {
+        "browserify": "^4.1.8",
+        "gulp": "^3.7.0",
+        "gulp-compass": "^1.1.9",
+        "gulp-git": "^0.5.1",
+        "gulp-notify": "^1.3.1",
+        "gulp-util": "^2.2.16",
+        "pretty-hrtime": "^0.2.1",
+        "reactify": "^0.13.1",
+        "uglifyify": "^2.5.0",
+        "vinyl-source-stream": "^0.1.1",
+        "watchify": "^0.10.2"
+    }
 }

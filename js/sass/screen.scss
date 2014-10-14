@@ -3,16 +3,17 @@
 /* Assumes 100% size = 16px */
 
 @import "compass/reset";
+@import "compass/css3/transform";
 
 $site-grey: rgb(169, 166, 155);
 $site-orange: rgb(211, 177, 17);
 
-$small-screen-breakpoint: 360px;
+$small-screen-breakpoint: 320px;
 $large-screen-breakpoint: 960px;
 
 @mixin if-media-is($media) {
   @if $media == phone {
-    @meida only screen and (max-width: $small-screen-breakpoint) { @content; }
+    @media only screen and (max-width: $small-screen-breakpoint) { @content; }
   } @else if $media == tablet {
     @media only screen and (min-width: $small-screen-breakpoint + 1) and (max-width: $large-screen-breakpoint - 1) { @content; }
   } @else if $media == computer {
@@ -32,10 +33,9 @@ $large-screen-breakpoint: 960px;
     font: normal 100% Cambria, Georgia, serif;
 
     .header {
-      font-size: 1.75em;
-      font-weight: italic;
-      float: top;
-      width: 100%;
+      font-size: 1.5em;
+      width: 83.33333333%;
+      margin-left: 5%;
 
       .text {
         width: 83.333333333333%;
@@ -45,16 +45,29 @@ $large-screen-breakpoint: 960px;
           margin-left: 9.5%;
           margin-top: -2%;
           font: normal 100% Reenie Beanie;
-          font-size: 2.5em;
+
+          @include if-media-is(phone) {
+            font-size: 1.75em;
+            text-indent: -50px;
+            margin-left: 1em;
+            @include transform(rotate(-15deg));
+          }
+
+          @include if-media-is(tablet) { font-size: 2em; }
+          @include if-media-is(computer) { font-size: 2.5em; }
+
         }
 
       }
     }
 
     .side-bar {
-      float: left;
-      width: 16.666666666%; /* 160px / 960px */
+      /* width: 16.666666666%; /\* 160px / 960px *\/ */
+      width: 160px;
       margin: 0 auto;
+
+      @include if-media-is(tablet) { float: left; }
+      @include if-media-is(computer) { float: left; }
 
       .icons {
         text-align: center;
@@ -101,10 +114,19 @@ $large-screen-breakpoint: 960px;
     }
 
     .posts-view {
+      position: relative;
+      margin: 20px;
+      float: none;
+      width: auto;
 
-      width: 83%; /* 800px / 960px */
-      float: right;
-      margin: 0 0 0 auto;
+      @media screen and (min-width: 401px) {
+        width: 83%; /* 800px / 960px */
+        float: left;
+        margin: 0 0 0 auto;
+
+        @include if-media-is(tablet) { max-width: 60%; }
+
+      }
 
       .page {
 
