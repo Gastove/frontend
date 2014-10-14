@@ -8,6 +8,7 @@
     "browserify": {
         "transform": [
             "reactify",
+            "uglifyify"
         ]
     },
     "dependencies": {
