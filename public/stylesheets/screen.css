@@ -206,50 +206,58 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* line 131, ../../js/sass/screen.scss */
+#web-app .app .posts-view ul {
+  list-style-type: circle;
+}
+/* line 135, ../../js/sass/screen.scss */
 #web-app .app .posts-view .page {
   width: 98%;
   margin: 0 0 0 auto;
 }
-/* line 136, ../../js/sass/screen.scss */
+/* line 140, ../../js/sass/screen.scss */
 #web-app .app .posts-view .page h1 {
   font-size: 1.5em;
   /* 150% size*/
   font-weight: bold;
 }
-/* line 140, ../../js/sass/screen.scss */
+/* line 144, ../../js/sass/screen.scss */
 #web-app .app .posts-view .page h2 {
   font-size: 1.4em;
   font-weight: bold;
 }
-/* line 144, ../../js/sass/screen.scss */
+/* line 148, ../../js/sass/screen.scss */
 #web-app .app .posts-view .page h3 {
   font-size: 1.3em;
   font-weight: bold;
 }
-/* line 149, ../../js/sass/screen.scss */
+/* line 153, ../../js/sass/screen.scss */
 #web-app .app .posts-view .page p {
   margin-top: 1em;
   margin-bottom: 1em;
 }
-/* line 155, ../../js/sass/screen.scss */
+/* line 157, ../../js/sass/screen.scss */
+#web-app .app .posts-view .page p strong {
+  font-weight: bold;
+}
+/* line 161, ../../js/sass/screen.scss */
+#web-app .app .posts-view .page p em {
+  font-style: italic;
+}
+/* line 167, ../../js/sass/screen.scss */
 #web-app .app .posts-view .page a:link {
   color: #606060;
 }
-/* line 159, ../../js/sass/screen.scss */
+/* line 171, ../../js/sass/screen.scss */
 #web-app .app .posts-view .page a:visited {
   color: #a9a69b;
 }
-/* line 163, ../../js/sass/screen.scss */
+/* line 175, ../../js/sass/screen.scss */
 #web-app .app .posts-view .page a:hover {
   color: #d3b111;
 }
-/* line 168, ../../js/sass/screen.scss */
+/* line 180, ../../js/sass/screen.scss */
 #web-app .app .posts-view .page blockquote {
   margin: 1.5em 10px;
   border-left: 2px solid #a9a69b;
   padding-left: 0.75em;
-}
-/* line 174, ../../js/sass/screen.scss */
-#web-app .app .posts-view .page ul {
-  list-style-type: circle;
 }
