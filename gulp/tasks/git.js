@@ -23,7 +23,7 @@ var add = function(toAdd){
 };
 
 var commit = function(msg, args){
-    var args = args || {};
+    var argumentss = args || {};
     return git.commit(msg, args);
     // return gulp.src(target)
     //     .pipe(git.commit(msg, args));
