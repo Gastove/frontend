@@ -249,3 +249,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   border-left: 2px solid #a9a69b;
   padding-left: 0.75em;
 }
+/* line 174, ../../js/sass/screen.scss */
+#web-app .app .posts-view .page ul {
+  list-style-type: circle;
+}
