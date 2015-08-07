@@ -9,7 +9,6 @@ var Post = module.exports = Backbone.Model.extend({
     idAttribute: "name",
 
     defaults: {
-        id: 0,
         name: "No name",
         title: "No title",
         created_on: "0",

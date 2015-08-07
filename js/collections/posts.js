@@ -5,6 +5,7 @@ var Posts = module.exports = Backbone.Collection.extend ({
 
     model: Post,
 
-    url: 'http://localhost:5000/api/home/',
+    // TODO: Control this with an env variable of some sort.
+    url: 'http://thermador.herokuapp.com/api/page',
 
 });

@@ -3,4 +3,12 @@
 *.org
 js/bundle.js
 node_modules/
+
+## Only ignore the deprecated build dir
 build/
+
+## Ignore Ruby stuff
+Gemfile*
+compass.rb
+
+
