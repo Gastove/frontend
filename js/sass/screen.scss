@@ -95,6 +95,10 @@ $site-orange: rgb(211, 177, 17);
       float: right;
       margin: 0 0 0 auto;
 
+      ul {
+        list-style-type: circle
+      }
+
       .page {
 
         width: 98%;
