@@ -153,6 +153,14 @@ $large-screen-breakpoint: 960px;
         p {
           margin-top: 1em;
           margin-bottom: 1em;
+
+          strong {
+            font-weight: bold
+          }
+
+          em {
+            font-style: italic
+          }
         }
 
         a {
