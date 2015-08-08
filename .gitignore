@@ -12,3 +12,6 @@ Gemfile*
 compass.rb
 
 
+/.tern-port
+/.tern-project
+/public/js/bundle.js.map
