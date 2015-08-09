@@ -14,7 +14,8 @@
         "commitBuildOutputs": "git commit -m \"Committing build outputs\"",
         "origin": "git push origin master",
         "heroku": "git push heroku master",
-        "deploy": "npm run checkoutMaster && npm run mergeStag && npm run build && npm run addBuildOutputs && npm run commitBuildOutputs && npm run origin && npm run heroku && npm run deploy"
+        "checkoutStag": "git checkout staging",
+        "deploy": "npm run checkoutMaster && npm run mergeStag && npm run build && npm run addBuildOutputs && npm run commitBuildOutputs && npm run origin && npm run heroku && npm run checkoutStag"
     },
     "dependencies": {
         "backbone": "^1.2.1",
