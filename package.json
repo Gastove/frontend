@@ -7,7 +7,7 @@
     },
     "scripts": {
         "checkoutMaster": "git checkout master",
-        "mergeStag": "git merge stag",
+        "mergeStag": "git merge --ff staging",
         "gitCommitMerge": "git commit -am \"Merge staging\"",
         "build": "gulp build",
         "addBuildOutputs": "git add ./public/*",
