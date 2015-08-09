@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 var runSequence = require('run-sequence').use('gulp');
 
-gulp.task('deploy',
+gulp.task('deploy', function () {
           runSequence(
               'checkoutDeployBranch',
               'mergeDevelopmentBranch',
@@ -11,4 +11,5 @@ gulp.task('deploy',
               'pushToOrigin',
               'pushToHeroku',
               'checkoutDevelopmentBranch'
-          ));
+          );
+});
