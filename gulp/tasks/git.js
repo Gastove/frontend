@@ -74,7 +74,10 @@ gulp.task('checkoutDevelopmentBranch', ['pushToHeroku'], function() {
 });
 
 gulp.task('addBuildOutputs', ['browserify'], function() {
-    add('./public/*');
+    add('./public/js/bundle.js');
+    add('./public/stylesheets/ie.css');
+    add('./public/stylesheets/screen.css');
+    add('./public/stylesheets/print.css');
 });
 
 gulp.task('commitBuildOutputs', ['addBuildOutputs'], function() {
