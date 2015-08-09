@@ -73,8 +73,16 @@ gulp.task('checkoutDevelopmentBranch', ['pushToHeroku'], function() {
     changeBranch(DEV);
 });
 
-gulp.task('addBuildOutputs', ['browserify'], function() {
-    add('./public/*');
+gulp.task('addBuildOutputs', ['build'], function() {
+    add('./public/js/bundle.js');
+    add('./public/stylesheets/ie.css');
+    add('./public/stylesheets/screen.css');
+    add('./public/stylesheets/print.css');
+});
+
+gulp.task('commitMerge', ['mergeDevelopmentBranch'], function() {
+    var msg = 'Merge stag into master';
+    commit(msg);
 });
 
 gulp.task('commitBuildOutputs', ['addBuildOutputs'], function() {
