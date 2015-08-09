@@ -74,8 +74,7 @@ gulp.task('checkoutDevelopmentBranch', ['pushToHeroku'], function() {
 });
 
 gulp.task('addBuildOutputs', ['browserify'], function() {
-    add('./public/js/*');
-    add('./public/stylesheets/*');
+    add('./build/*');
 });
 
 gulp.task('commitBuildOutputs', ['addBuildOutputs'], function() {
