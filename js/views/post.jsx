@@ -10,13 +10,13 @@ var PostView = module.exports = React.createClass({
     },
 
     componentWillMount: function() {
-        if (this.props.key == this.props.show) {
+        if (this.props.name == this.props.show) {
             this.setState({display: true});
         }
     },
 
     componentWillReceiveProps: function(newProps) {
-        if (this.props.key == newProps.show) {
+        if (this.props.name == newProps.show) {
             this.setState({display: true});
         } else {
             this.setState({display: false});
@@ -24,12 +24,11 @@ var PostView = module.exports = React.createClass({
     },
 
     render: function() {
-
         if (this.state.display) {
-            var md = Marked(this.props.post.get("body"));
+            var html = this.props.post.get('body');
             return (
                 <div className="page">
-                  <span dangerouslySetInnerHTML={{__html: md}} />
+                  <span dangerouslySetInnerHTML={{__html: html}} />
                 </div>
             );
         } else {

@@ -12,7 +12,8 @@ var Sidebar = module.exports = React.createClass({
 
         var tabs = this.props.posts.map(
             function(post) {
-                return <Tab key={post.id}
+                return <Tab name={post.id}
+                            key={post.id}
                             post={post}
                             selectPost={selectPost}
                             show={show}/>;

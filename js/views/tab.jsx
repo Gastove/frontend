@@ -13,10 +13,10 @@ var Tab = module.exports = React.createClass({
 
     render: function() {
         var show = this.props.show;
-        var key = this.props.key;
-        var tabClass =  show == key ? 'current' : 'waiting';
+        var name = this.props.name;
+        var tabClass = show == name ? 'current' : 'waiting';
         return (
-            <div key={this.props.post.get('id')} className='post-tab'>
+            <div name={name} className='post-tab'>
               <a className={tabClass}
                  href='#'
                  onClick={this.handleClick}>

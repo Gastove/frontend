@@ -11,7 +11,7 @@ var Header = require('./views/header');
 
 var avatarUrl = "http://www.gravatar.com/avatar/a942cea13e537bb0ea754b6d216c3377?size=160";
 
-var app = React.createClass({
+var App = React.createClass({
     mixins: [BackboneMixin],
 
     getInitialState: function() {
@@ -33,16 +33,16 @@ var app = React.createClass({
     render: function () {
         return (
             <div className="app">
-              <Header />
-              <Sidebar avatarUrl={avatarUrl}
-                       posts={this.props.posts}
-                       selectPost={this.selectPost}
-                       show={this.state.show}/>
-              <PostsView posts={this.props.posts} show={this.state.show}/>
+                <Header />
+                <Sidebar avatarUrl={avatarUrl}
+                         posts={this.props.posts}
+                         selectPost={this.selectPost}
+                         show={this.state.show}/>
+                <PostsView posts={this.props.posts} show={this.state.show}/>
             </div>
         );
     }
 });
 
-React.renderComponent(<app posts={new Posts()} />,
-                      document.getElementById('web-app'));
+React.render(<App posts={new Posts()} />,
+             document.getElementById('web-app'));
