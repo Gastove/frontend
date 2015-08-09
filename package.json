@@ -8,14 +8,14 @@
     "scripts": {
         "checkoutMaster": "git checkout master",
         "mergeStag": "git merge --commit staging",
-        "gitCommitMerge": "git commit -am \"Merge staging\"",
+        "goToMaster": "npm run checkoutMaster && npm run mergeStag",
         "build": "gulp build",
-        "addBuildOutputs": "git add ./public/*",
         "commitBuildOutputs": "git commit -am \"Committing build outputs\"",
         "origin": "git push origin master",
         "heroku": "git push heroku master",
+        "push": "npm run origin && npm run heroku",
         "checkoutStag": "git checkout staging",
-        "deploy": "npm run checkoutMaster && npm run mergeStag && npm run build && npm run commitBuildOutputs && npm run origin && npm run heroku && npm run checkoutStag"
+        "deploy": "npm run goToMaster && npm run build && npm run commitBuildOutputs && npm run push && npm run checkoutStag"
     },
     "dependencies": {
         "backbone": "^1.2.1",
