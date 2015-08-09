@@ -35,7 +35,7 @@ var commitEmpty = function(){
 };
 
 var merge = function(target){
-    git.merge(target, {args: "--ff"}, function(err){
+    git.merge(target, {args: "--commit"}, function(err){
         if (err) throw err;
     });
 };
