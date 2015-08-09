@@ -25,8 +25,6 @@ var add = function(toAdd){
 var commit = function(msg, args){
     var argumentss = args || {};
     return git.commit(msg, args);
-    // return gulp.src(target)
-    //     .pipe(git.commit(msg, args));
 };
 
 var commitEmpty = function(){
@@ -85,7 +83,7 @@ gulp.task('commitMerge', ['mergeDevelopmentBranch'], function() {
     commit(msg);
 });
 
-gulp.task('commitBuildOutputs', ['addBuildOutputs'], function() {
+gulp.task('commitBuildOutputs', function() {
     var msg = 'Committing build outputs';
     commit(msg, {args: '-a'});
 });
