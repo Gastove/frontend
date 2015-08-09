@@ -1,6 +1,5 @@
 /* reminder: target / context = result */
 /* Assumes 100% size = 16px */
-/* line 5, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -22,84 +21,69 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
 
-/* line 25, ../../js/sass/screen.scss */
 #web-app {
   margin: 36px auto;
   width: 95%;
 }
 @media only screen and (min-width: 960px) {
-  /* line 25, ../../js/sass/screen.scss */
   #web-app {
     width: 960px;
   }
 }
-/* line 31, ../../js/sass/screen.scss */
 #web-app .app {
   margin: 0 auto 53px auto;
   font: normal 100% Cambria, Georgia, serif;
 }
-/* line 35, ../../js/sass/screen.scss */
 #web-app .app .header {
   font-size: 1.5em;
   width: 83.33333333%;
   margin-left: 5%;
 }
-/* line 40, ../../js/sass/screen.scss */
 #web-app .app .header .text {
   width: 83.333333333333%;
   float: right;
 }
-/* line 44, ../../js/sass/screen.scss */
 #web-app .app .header .text p {
   margin-left: 9.5%;
   margin-top: -2%;
   font: normal 100% Reenie Beanie;
 }
 @media only screen and (max-width: 320px) {
-  /* line 44, ../../js/sass/screen.scss */
   #web-app .app .header .text p {
     font-size: 1.75em;
     text-indent: -50px;
@@ -111,78 +95,64 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 }
 @media only screen and (min-width: 321px) and (max-width: 959px) {
-  /* line 44, ../../js/sass/screen.scss */
   #web-app .app .header .text p {
     font-size: 2em;
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 44, ../../js/sass/screen.scss */
   #web-app .app .header .text p {
     font-size: 2.5em;
   }
 }
-/* line 64, ../../js/sass/screen.scss */
 #web-app .app .side-bar {
   /* width: 16.666666666%; /\* 160px / 960px *\/ */
   width: 160px;
   margin: 0 auto;
 }
 @media only screen and (min-width: 321px) and (max-width: 959px) {
-  /* line 64, ../../js/sass/screen.scss */
   #web-app .app .side-bar {
     float: left;
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 64, ../../js/sass/screen.scss */
   #web-app .app .side-bar {
     float: left;
   }
 }
-/* line 72, ../../js/sass/screen.scss */
 #web-app .app .side-bar .icons {
   text-align: center;
 }
-/* line 74, ../../js/sass/screen.scss */
 #web-app .app .side-bar .icons a {
   color: black;
 }
-/* line 76, ../../js/sass/screen.scss */
 #web-app .app .side-bar .icons a i {
   display: inline-block;
 }
-/* line 82, ../../js/sass/screen.scss */
 #web-app .app .side-bar hr {
   height: 1px;
   width: 90%;
   border: 0;
   background: black;
 }
-/* line 89, ../../js/sass/screen.scss */
 #web-app .app .side-bar .post-tab {
   font-size: 1.5em;
   height: 1.75em;
   text-align: center;
 }
-/* line 95, ../../js/sass/screen.scss */
 #web-app .app .side-bar .post-tab a.current:link {
   font-size: 115%;
   text-decoration: none;
   color: black;
 }
-/* line 102, ../../js/sass/screen.scss */
 #web-app .app .side-bar .post-tab a.waiting:link, #web-app .app .side-bar .post-tab a.waiting:visited {
   font-size: 95%;
   text-decoration: none;
   color: #a9a69b;
 }
-/* line 107, ../../js/sass/screen.scss */
 #web-app .app .side-bar .post-tab a.waiting:hover {
   font-size: 100%;
   color: #d3b111;
 }
-/* line 116, ../../js/sass/screen.scss */
 #web-app .app .posts-view {
   position: relative;
   margin: 20px;
@@ -190,7 +160,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   width: auto;
 }
 @media screen and (min-width: 401px) {
-  /* line 116, ../../js/sass/screen.scss */
   #web-app .app .posts-view {
     width: 83%;
     /* 800px / 960px */
@@ -199,63 +168,51 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 }
 @media only screen and (min-width: 401px) and (min-width: 321px) and (max-width: 959px) {
-  /* line 116, ../../js/sass/screen.scss */
   #web-app .app .posts-view {
     max-width: 60%;
   }
 }
 
-/* line 131, ../../js/sass/screen.scss */
 #web-app .app .posts-view ul {
   list-style-type: circle;
+  margin-left: 1em;
 }
-/* line 135, ../../js/sass/screen.scss */
 #web-app .app .posts-view .page {
   width: 98%;
   margin: 0 0 0 auto;
 }
-/* line 140, ../../js/sass/screen.scss */
 #web-app .app .posts-view .page h1 {
   font-size: 1.5em;
   /* 150% size*/
   font-weight: bold;
 }
-/* line 144, ../../js/sass/screen.scss */
 #web-app .app .posts-view .page h2 {
   font-size: 1.4em;
   font-weight: bold;
 }
-/* line 148, ../../js/sass/screen.scss */
 #web-app .app .posts-view .page h3 {
   font-size: 1.3em;
   font-weight: bold;
 }
-/* line 153, ../../js/sass/screen.scss */
 #web-app .app .posts-view .page p {
   margin-top: 1em;
   margin-bottom: 1em;
 }
-/* line 157, ../../js/sass/screen.scss */
 #web-app .app .posts-view .page p strong {
   font-weight: bold;
 }
-/* line 161, ../../js/sass/screen.scss */
 #web-app .app .posts-view .page p em {
   font-style: italic;
 }
-/* line 167, ../../js/sass/screen.scss */
 #web-app .app .posts-view .page a:link {
   color: #606060;
 }
-/* line 171, ../../js/sass/screen.scss */
 #web-app .app .posts-view .page a:visited {
   color: #a9a69b;
 }
-/* line 175, ../../js/sass/screen.scss */
 #web-app .app .posts-view .page a:hover {
   color: #d3b111;
 }
-/* line 180, ../../js/sass/screen.scss */
 #web-app .app .posts-view .page blockquote {
   margin: 1.5em 10px;
   border-left: 2px solid #a9a69b;
