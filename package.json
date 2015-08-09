@@ -11,7 +11,7 @@
         "gitCommitMerge": "git commit -am \"Merge staging\"",
         "build": "gulp build",
         "addBuildOutputs": "git add ./public/*",
-        "commitBuildOutputs": "git commit -am --allow-empty \"Committing build outputs\"",
+        "commitBuildOutputs": "git commit -am \"Committing build outputs\"",
         "origin": "git push origin master",
         "heroku": "git push heroku master",
         "checkoutStag": "git checkout staging",
