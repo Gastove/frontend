@@ -3,14 +3,14 @@ var runSequence = require('run-sequence').use('gulp', 'git');
 
 gulp.task('deploy',
           [
-              'checkoutDeployBranch',
-              'mergeDevelopmentBranch',
+              // 'checkoutDeployBranch',
+              // 'mergeDevelopmentBranch',
               'commitMerge',
-              'build',
-              'addBuildOutputs',
-              'commitBuildOutputs',
-              'pushToOrigin',
-              'pushToHeroku',
+              // 'build',
+              // 'addBuildOutputs',
+              // 'commitBuildOutputs',
+              // 'pushToOrigin',
+              // 'pushToHeroku',
               'checkoutDevelopmentBranch',
 
           ]);
