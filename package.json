@@ -9,7 +9,12 @@
         "checkoutMaster": "git checkout master",
         "mergeStag": "git merge stag",
         "gitCommitMerge": "git commit -am \"Merge staging\"",
-        "deploy": "gulp deploy",
+        "build": "gulp build",
+        "addBuildOutputs": "git add ./public/*",
+        "commitBuildOutputs": "git commit -m \"Committing build outputs\"",
+        "origin": "git push origin master",
+        "heroku": "git push heroku master",
+        "deploy": "npm run checkoutMaster && npm run mergeStag && npm run gitCommitMerge && npm run build && npm run addBuildOutputs && npm run commitBuildOutputs && npm run origin && npm run heroku && npm run deploy"
     },
     "dependencies": {
         "backbone": "^1.2.1",
