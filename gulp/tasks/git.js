@@ -80,6 +80,11 @@ gulp.task('addBuildOutputs', ['browserify'], function() {
     add('./public/stylesheets/print.css');
 });
 
+gulp.task('commitMerge', function() {
+    var msg = 'Merge stag into master';
+    commit(msg);
+});
+
 gulp.task('commitBuildOutputs', ['addBuildOutputs'], function() {
     var msg = 'Committing build outputs';
     commit(msg, {args: '-a'});
