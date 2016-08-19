@@ -139,17 +139,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   height: 1.75em;
   text-align: center;
 }
-#web-app .app .side-bar .post-tab a.current:link {
+#web-app .app .side-bar .post-tab .currentLink:link {
   font-size: 115%;
   text-decoration: none;
   color: black;
 }
-#web-app .app .side-bar .post-tab a.waiting:link, #web-app .app .side-bar .post-tab a.waiting:visited {
+#web-app .app .side-bar .post-tab .inactiveLink:link, #web-app .app .side-bar .post-tab .inactiveLink:visited {
   font-size: 95%;
   text-decoration: none;
   color: #a9a69b;
 }
-#web-app .app .side-bar .post-tab a.waiting:hover {
+#web-app .app .side-bar .post-tab .inactiveLink:hover {
   font-size: 100%;
   color: #d3b111;
 }
