@@ -1,27 +1,29 @@
 /**@jsx React.DOM */
 var React = require('react');
+var Router = require('react-router');
 
 var Tab = module.exports = React.createClass({
 
-    handleClick: function() {
-        this.props.selectPost(this.props.post.get('name'));
-    },
+    /* handleClick: function() {
+     *     this.props.selectPost(this.props.post.get('name'));
+     * },*/
 
     capitaliseFirstLetter: function (string) {
         return string.charAt(0).toUpperCase() + string.slice(1);
     },
 
     render: function() {
-        var show = this.props.show;
-        var name = this.props.name;
-        var tabClass = show == name ? 'current' : 'waiting';
+
+        let selectedPost = this.props.selectedPost;
+        let name = this.props.name;
+
+        let tabClass = selectedPost == name ? 'currentLink' : 'inactiveLink';
+
+        let link = `/${name}`;
+
         return (
             <div name={name} className='post-tab'>
-              <a className={tabClass}
-                 href='#'
-                 onClick={this.handleClick}>
-                {this.capitaliseFirstLetter(this.props.post.get('name'))}
-              </a>
+                <Router.Link to={link} className={tabClass} >{this.capitaliseFirstLetter(name)}</Router.Link>
             </div>
         );
     }

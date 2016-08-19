@@ -1,28 +1,26 @@
 /**@jsx React.DOM */
 
-var Backbone = require('backbone');
-//var $ = require('jquery');
-var PostView = require('./post');
-var Posts = require('../collections/posts');
+var Post = require('./post');
 var React = require('react');
 
 var PostsView = module.exports = React.createClass({
 
+    resolvePostName: function() {
+        if (this.props.hasOwnProperty("postName")) {
+            return this.props.postName;
+        } else if (this.props.hasOwnProperty("params")) {
+            return this.props.params.postName;
+        }
+    },
+
     render: function() {
 
-        var show = this.props.show;
-        var nodes = this.props.posts.map(
-            function(post) {
-                return <PostView name={post.id}
-                                 key={post.id}
-                                 post={post}
-                                 show={show}/>
-            }
-        );
+        let postName = this.resolvePostName()
 
         return (
             <div className = "posts-view">
-              {nodes}
+                <Post postName={postName}
+                      key={postName} />
             </div>
         );
     },
