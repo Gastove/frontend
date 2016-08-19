@@ -159,7 +159,21 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   float: none;
   width: auto;
 }
-@media screen and (min-width: 401px) {
+@media screen and (min-width: 481px) {
+  #web-app .app .posts-view {
+    width: 83%;
+    /* 800px / 960px */
+    float: left;
+    margin: 0 0 0 auto;
+  }
+}
+@media only screen and (min-width: 481px) and (min-width: 481px) and (max-width: 959px) {
+  #web-app .app .posts-view {
+    max-width: 60%;
+  }
+}
+
+@media screen and (max-width: 480px) {
   #web-app .app .posts-view {
     width: 95%;
     /* 800px / 960px */
@@ -167,7 +181,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin: 0 1em 0 1em;
   }
 }
-@media only screen and (min-width: 401px) and (min-width: 481px) and (max-width: 959px) {
+@media only screen and (max-width: 480px) and (min-width: 481px) and (max-width: 959px) {
   #web-app .app .posts-view {
     max-width: 90%;
   }
