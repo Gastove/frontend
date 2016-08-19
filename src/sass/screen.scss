@@ -8,7 +8,7 @@
 $site-grey: rgb(169, 166, 155);
 $site-orange: rgb(211, 177, 17);
 
-$small-screen-breakpoint: 320px;
+$small-screen-breakpoint: 480px;
 $large-screen-breakpoint: 960px;
 
 @mixin if-media-is($media) {
@@ -120,11 +120,11 @@ $large-screen-breakpoint: 960px;
             width: auto;
 
             @media screen and (min-width: 401px) {
-                width: 83%; /* 800px / 960px */
+                width: 95%; /* 800px / 960px */
                 float: left;
-                margin: 0 0 0 auto;
+                margin: 0 1em 0 1em;
 
-                @include if-media-is(tablet) { max-width: 60%; }
+                @include if-media-is(tablet) { max-width: 90%; }
 
             }
 

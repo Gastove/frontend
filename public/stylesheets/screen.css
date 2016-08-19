@@ -83,7 +83,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   margin-top: -2%;
   font: normal 100% Reenie Beanie;
 }
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 480px) {
   #web-app .app .header .text p {
     font-size: 1.75em;
     text-indent: -50px;
@@ -94,7 +94,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     transform: rotate(-15deg);
   }
 }
-@media only screen and (min-width: 321px) and (max-width: 959px) {
+@media only screen and (min-width: 481px) and (max-width: 959px) {
   #web-app .app .header .text p {
     font-size: 2em;
   }
@@ -109,7 +109,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   width: 160px;
   margin: 0 auto;
 }
-@media only screen and (min-width: 321px) and (max-width: 959px) {
+@media only screen and (min-width: 481px) and (max-width: 959px) {
   #web-app .app .side-bar {
     float: left;
   }
@@ -161,15 +161,15 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 @media screen and (min-width: 401px) {
   #web-app .app .posts-view {
-    width: 83%;
+    width: 95%;
     /* 800px / 960px */
     float: left;
-    margin: 0 0 0 auto;
+    margin: 0 1em 0 1em;
   }
 }
-@media only screen and (min-width: 401px) and (min-width: 321px) and (max-width: 959px) {
+@media only screen and (min-width: 401px) and (min-width: 481px) and (max-width: 959px) {
   #web-app .app .posts-view {
-    max-width: 60%;
+    max-width: 90%;
   }
 }
 
