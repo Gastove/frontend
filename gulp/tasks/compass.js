@@ -4,11 +4,11 @@ var notify = require('gulp-notify');
 var compass = require('gulp-compass');
 
 gulp.task('compass', function() {
-    return gulp.src('./js/sass/*.scss')
+    return gulp.src('./src/sass/*.scss')
         .pipe(compass({
             config_file: './compass.rb',
             css: './build/css',
-            sass: 'js/sass'
+            sass: 'src/sass'
         }))
         .pipe(gulp.dest('./public/stylesheets'))
         .on('error', handleErrors);

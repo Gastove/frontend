@@ -14,7 +14,7 @@ gulp.task('browserify', function() {
         cache: {},
         packageCache: {},
         fullPaths: true,
-        entries: ['./js/app.jsx'],
+        entries: ['./src/app.jsx'],
         extensions: ['.jsx'],
         transform: [reactify],
         debug: true
