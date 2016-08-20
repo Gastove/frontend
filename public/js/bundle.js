@@ -27767,7 +27767,7 @@ var Sidebar = module.exports = React.createClass({displayName: "exports",
     },
 
     loadAvailablePosts: function() {
-        let url = `http://thermador.herokuapp.com/api/page/list`;
+        let url = `http://thermador.herokuapp.com/api/page`;
 
         // Inside our promise resolution, `this` means Window. Glee.
         let that = this;
@@ -27787,8 +27787,9 @@ var Sidebar = module.exports = React.createClass({displayName: "exports",
 
         var tabs = this.state.allPosts.map(
             function(post) {
-                return React.createElement(Tab, {name: post, 
-                            key: post, 
+                return React.createElement(Tab, {name: post.name, 
+                            title: post.title, 
+                            key: post.name, 
                             selectedPost: selectedPost});
             }
         );
@@ -27819,14 +27820,6 @@ var Router = require('react-router');
 
 var Tab = module.exports = React.createClass({displayName: "exports",
 
-    /* handleClick: function() {
-     *     this.props.selectPost(this.props.post.get('name'));
-     * },*/
-
-    capitaliseFirstLetter: function (string) {
-        return string.charAt(0).toUpperCase() + string.slice(1);
-    },
-
     render: function() {
 
         let selectedPost = this.props.selectedPost;
@@ -27838,7 +27831,7 @@ var Tab = module.exports = React.createClass({displayName: "exports",
 
         return (
             React.createElement("div", {name: name, className: "post-tab"}, 
-                React.createElement(Router.Link, {to: link, className: tabClass}, this.capitaliseFirstLetter(name))
+                React.createElement(Router.Link, {to: link, className: tabClass}, this.props.title)
             )
         );
     }

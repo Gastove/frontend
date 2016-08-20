@@ -15,7 +15,7 @@ var Sidebar = module.exports = React.createClass({
     },
 
     loadAvailablePosts: function() {
-        let url = `http://thermador.herokuapp.com/api/page/list`;
+        let url = `http://thermador.herokuapp.com/api/page`;
 
         // Inside our promise resolution, `this` means Window. Glee.
         let that = this;
@@ -35,8 +35,9 @@ var Sidebar = module.exports = React.createClass({
 
         var tabs = this.state.allPosts.map(
             function(post) {
-                return <Tab name={post}
-                            key={post}
+                return <Tab name={post.name}
+                            title={post.title}
+                            key={post.name}
                             selectedPost={selectedPost} />;
             }
         );
