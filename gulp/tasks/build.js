@@ -1,3 +1,3 @@
 var gulp = require('gulp');
 
-gulp.task('build', ['browserify', 'compass']);
+gulp.task('build', ['browserify', 'compass', 'babel']);
