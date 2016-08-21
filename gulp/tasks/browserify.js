@@ -7,6 +7,7 @@ var buffer = require('vinyl-buffer');
 var sourcemaps = require('gulp-sourcemaps');
 var handleErrors = require('../util/handleErrors');
 var bundleLogger = require('../util/bundleLogger');
+var polyfiller = require('gulp-polyfiller');
 
 gulp.task('browserify', function() {
 
