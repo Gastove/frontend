@@ -14,8 +14,8 @@ var PostView = module.exports = React.createClass({
     },
 
     componentDidUpdate (prevProps) {
-        let oldName = prevProps.postName;
-        let newName = this.props.postName;
+        var oldName = prevProps.postName;
+        var newName = this.props.postName;
         if (newName !== oldName) {
             this.loadPost();
         }
@@ -41,11 +41,11 @@ var PostView = module.exports = React.createClass({
 
     loadPost: function() {
 
-        let postName = this.props.postName || this.props.params.postName;
-        let url = `http://thermador.herokuapp.com/api/page/${postName}`;
+        var postName = this.props.postName || this.props.params.postName;
+        var url = `http://thermador.herokuapp.com/api/page/${postName}`;
 
         // Inside our promise resolution, `this` means Window. Glee.
-        let that = this;
+        var that = this;
 
         fetch(url).then(function(response){
             return response.json();

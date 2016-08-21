@@ -15,7 +15,7 @@ var PostsView = module.exports = React.createClass({
 
     render: function() {
 
-        let postName = this.resolvePostName()
+        var postName = this.resolvePostName()
 
         return (
             <div className = "posts-view">

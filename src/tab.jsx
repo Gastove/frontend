@@ -6,12 +6,12 @@ var Tab = module.exports = React.createClass({
 
     render: function() {
 
-        let selectedPost = this.props.selectedPost;
-        let name = this.props.name;
+        var selectedPost = this.props.selectedPost;
+        var name = this.props.name;
 
-        let tabClass = selectedPost == name ? 'currentLink' : 'inactiveLink';
+        var tabClass = selectedPost == name ? 'currentLink' : 'inactiveLink';
 
-        let link = `/${name}`;
+        var link = `/${name}`;
 
         return (
             <div name={name} className='post-tab'>

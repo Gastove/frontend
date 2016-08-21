@@ -15,10 +15,10 @@ var Sidebar = module.exports = React.createClass({
     },
 
     loadAvailablePosts: function() {
-        let url = `http://thermador.herokuapp.com/api/page`;
+        var url = `http://thermador.herokuapp.com/api/page`;
 
         // Inside our promise resolution, `this` means Window. Glee.
-        let that = this;
+        var that = this;
 
         fetch(url).then(function(response){
             return response.json();
