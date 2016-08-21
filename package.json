@@ -27,16 +27,19 @@
     "react": "^15.3.0",
     "react-dom": "^15.3.0",
     "react-router": "^2.6.1",
-    "underscore": "^1.6.0"
+    "underscore": "^1.6.0",
+    "whatwg-fetch": "^1.0.0"
   },
   "devDependencies": {
     "babel-preset-es2015": "^6.13.2",
+    "babel-preset-react": "^6.11.1",
     "browserify": "^13.1.0",
     "gulp": "^3.9.0",
     "gulp-babel": "^6.1.2",
     "gulp-compass": "^2.1.0",
     "gulp-git": "^1.2.4",
     "gulp-notify": "^2.2.0",
+    "gulp-polyfiller": "0.0.1",
     "gulp-sourcemaps": "^1.5.2",
     "gulp-util": "^3.0.6",
     "pretty-hrtime": "^1.0.2",
