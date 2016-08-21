@@ -27662,8 +27662,8 @@ var PostView = module.exports = React.createClass({displayName: "exports",
     },
 
     componentDidUpdate (prevProps) {
-        let oldName = prevProps.postName;
-        let newName = this.props.postName;
+        var oldName = prevProps.postName;
+        var newName = this.props.postName;
         if (newName !== oldName) {
             this.loadPost();
         }
@@ -27689,11 +27689,11 @@ var PostView = module.exports = React.createClass({displayName: "exports",
 
     loadPost: function() {
 
-        let postName = this.props.postName || this.props.params.postName;
-        let url = `http://thermador.herokuapp.com/api/page/${postName}`;
+        var postName = this.props.postName || this.props.params.postName;
+        var url = `http://thermador.herokuapp.com/api/page/${postName}`;
 
         // Inside our promise resolution, `this` means Window. Glee.
-        let that = this;
+        var that = this;
 
         fetch(url).then(function(response){
             return response.json();
@@ -27738,7 +27738,7 @@ var PostsView = module.exports = React.createClass({displayName: "exports",
 
     render: function() {
 
-        let postName = this.resolvePostName()
+        var postName = this.resolvePostName()
 
         return (
             React.createElement("div", {className: "posts-view"}, 
@@ -27767,10 +27767,10 @@ var Sidebar = module.exports = React.createClass({displayName: "exports",
     },
 
     loadAvailablePosts: function() {
-        let url = `http://thermador.herokuapp.com/api/page`;
+        var url = `http://thermador.herokuapp.com/api/page`;
 
         // Inside our promise resolution, `this` means Window. Glee.
-        let that = this;
+        var that = this;
 
         fetch(url).then(function(response){
             return response.json();
@@ -27822,12 +27822,12 @@ var Tab = module.exports = React.createClass({displayName: "exports",
 
     render: function() {
 
-        let selectedPost = this.props.selectedPost;
-        let name = this.props.name;
+        var selectedPost = this.props.selectedPost;
+        var name = this.props.name;
 
-        let tabClass = selectedPost == name ? 'currentLink' : 'inactiveLink';
+        var tabClass = selectedPost == name ? 'currentLink' : 'inactiveLink';
 
-        let link = `/${name}`;
+        var link = `/${name}`;
 
         return (
             React.createElement("div", {name: name, className: "post-tab"}, 
