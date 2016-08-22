@@ -199,22 +199,27 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-size: 1.5em;
   /* 150% size*/
   font-weight: bold;
+  margin-top: 1em;
 }
 #web-app .app .posts-view .page h2 {
   font-size: 1.4em;
   font-weight: bold;
+  margin-top: 1em;
 }
 #web-app .app .posts-view .page h3 {
   font-size: 1.3em;
   font-weight: bold;
+  margin-top: 1em;
 }
 #web-app .app .posts-view .page h4 {
   font-size: 1.2em;
   font-weight: bold;
+  margin-top: 1em;
 }
 #web-app .app .posts-view .page h5 {
   font-size: 1.1em;
   font-weight: bold;
+  margin-top: 1em;
 }
 #web-app .app .posts-view .page p {
   margin-top: 1em;
