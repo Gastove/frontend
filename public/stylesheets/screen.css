@@ -189,7 +189,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 #web-app .app .posts-view ul {
   list-style-type: circle;
-  margin-left: 1em;
+  margin-left: 1.5em;
 }
 #web-app .app .posts-view .page {
   width: 98%;
